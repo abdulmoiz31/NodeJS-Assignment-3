@@ -1,0 +1,21 @@
+# .editorconfig
+
+# Default settings for all files
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# Settings for JavaScript files
+[*.js]
+
+[*.{js,jsx}]
+exclude_lines = console.log
+
+# Allow console.log in index.js and db.js
+[!index.js]
+[!db.js]
+insert_final_newline = true

@@ -6,6 +6,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && npm test"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "node index.js",
+      "git add"
+    ]
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -14,5 +25,10 @@
     "jsonwebtoken": "^9.0.1",
     "mongodb": "4.0",
     "nodemailer": "^6.9.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.46.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3"
   }
 }

@@ -1,6 +1,7 @@
-
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const uri = "mongodb://localhost:27017";
+//when fetching uri from db it was producing TypeError [ERR_INVALID_URL]: Invalid URL: mongodb://localhost:27017" that's why I haven't used that
+// However I have used .env for token secret
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
